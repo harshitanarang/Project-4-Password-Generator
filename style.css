@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container1 {
+    width: 90%;
+    max-width: 360px;
+    transform: translateX(-3.2%);
+}
+
+.container {
+    background: linear-gradient(201deg, rgba(15, 0, 0, 1) 0%, rgba(72, 40, 129, 1) 1%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+
+}
+
+h1 {
+    font-size: 25px;
+    padding-bottom: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: rgba(255, 255, 0, 0.87);
+    line-height: 1.2rem;
+    margin-right: 3px;
+    font-weight: 600px;
+}
+
+.displaypass {
+    /* global 94%+ browsers support */
+    background: linear-gradient(90deg, rgba(46, 25, 82, 1) 100%, rgba(0, 209, 255, 1) 100%);
+    border-radius: 15px;
+    border-bottom: 0.35rem solid black;
+    appearance: none;
+    position: relative;
+    margin: 1 rem 0;
+    margin-bottom: 1rem;
+}
+
+.input-container {
+    background: linear-gradient(90deg, rgba(46, 25, 82, 1) 100%, rgba(0, 209, 255, 1) 100%);
+    border-bottom: 0.35rem solid black;
+    border-radius: 15px;
+}
+
+.display {
+    width: 100%;
+    background-color: transparent;
+    padding-bottom: 15px;
+
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    line-height: 38px;
+    border: none;
+    margin-left: 3px;
+
+}
+
+.display::placeholder {
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    opacity: 0.65;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 0, 0.895);
+
+}
+
+.copy {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+}
+
+.length-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 22px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+}
+
+.length-container p:nth-child(2) {
+    color: yellow;
+    font-size: 25px;
+
+}
+
+.length-container p:nth-child(1) {
+    color: yellow;
+    font-size: 25px;
+
+}
+
+.Strength-indicator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.strength {
+    font-size: 23px;
+    color: yellow;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 22px;
+    text-transform: uppercase;
+}
+
+.indicator {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    padding-top: 5px;
+    margin: 18px 20px 10px 10px;
+    box-shadow: 1px transparent;
+    margin-top: 12px;
+}
+
+.generate-button {
+    border-radius: 22px;
+    background-color: violet;
+    width: 90%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    border-bottom: 0.35rem solid yellow;
+    text-align: center;
+    margin-left: 18px;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+    margin-left: 22px;
+    margin-bottom: 10px;
+}
+
+.check input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 1px solid cyan;
+    border-radius: 5px;
+    position: relative;
+}
+
+.check input:checked {
+    background-color: aqua;
+}
+
+.check input:checked::before {
+    position: absolute;
+    content: '✓';
+    color: blue;
+    font-size: 1.05rem;
+    font-weight: 800;
+    left: 50%;
+    transform: translateX(-50%) translateY(10%);
+    top: -3.5px;
+}
+
+.check label {
+    color: whitesmoke;
+    font-size: 1rem;
+    letter-spacing: 0.75px;
+}
+
+.slide {
+    padding-left: 22px;
+}
+
+.copy {
+    background: transparent;
+    border: none;
+}
+
+.copy i {
+    font-size: 25px;
+    color: rgba(255, 255, 0, 0.813);
+}
+
+.btn {
+    padding-bottom: 15px;
+}
+.tooltip {
+    position: absolute;
+    background: linear-gradient(90deg, rgba(46, 25, 82, 1) 100%, rgba(0, 209, 255, 1) 100%);
+    color: yellow;
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+    
+  
+  .tooltip.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .slider{
+    appearance: none;
+    width:100%;
+    height: 0.75rem;
+    cursor: pointer;
+    background-color: hsl(281, 89%, 26%);
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    background-image: linear-gradient(hsl(285, 91%, 52%)), hsl(285, 91%, 52%);
+    background-repeat: no-repeat;
+    border:none;
+    outline:none;
+    z-index:-1;
+    padding-right: 40px;
+}
+
+
+.slider::-webkit-slider-thumb {
+    position:relative;
+    z-index:1;
+    appearance: none;
+    height:2rem;
+    width:2rem;
+    border-radius: 50%;
+    background-color:hsl(52, 100%, 62%);
+    cursor:pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.50);
+    transition: all 100ms ease-in;
+}
+
+.slider{
+    outline: 3px solid hsl(52, 100%, 62%);
+}
+
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid hsl(52, 100%, 62%);
+    background-color:hsl(268, 75%, 9%);
+    box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.80);
+}
+.slide{
+    margin-right: 24px;
+}
